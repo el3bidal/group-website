@@ -19,7 +19,7 @@ const USER_CONFIG = {
   ],
 
   links: {
-    scholar: "https://scholar.google.com/",
+    scholar: "https://scholar.google.com/citations?user=2mBlMQ8AAAAJ&hl=en",
     github:  "https://github.com/",
     twitter: "",          // leave empty to hide
     cv:      "assets/cv.pdf",
