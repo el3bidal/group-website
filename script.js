@@ -105,12 +105,6 @@ function populateLists(cfg) {
   if (pubList && cfg.publications?.length) {
     pubList.innerHTML = cfg.publications.map(p => `<article class="pub-card ${p.abstractImg ? 'has-abstract' : ''}" data-year="${p.year}">
   <div class="pub-year">${p.year}</div>
-  
-  ${p.abstractImg ? `
-    <div class="pub-abstract">
-      <img src="${p.abstractImg}" alt="Graphical abstract for ${p.title}" class="pub-abstract-img" />
-    </div>
-  ` : ''}
 
   <div class="pub-content">
     <div class="pub-header">
@@ -122,6 +116,12 @@ function populateLists(cfg) {
     <p class="pub-authors">${boldName(p.authors, cfg.name)}</p>
     <p class="pub-venue">${p.venue}</p>
   </div>
+
+  ${p.abstractImg ? `
+    <div class="pub-abstract">
+      <img src="${p.abstractImg}" alt="Graphical abstract for ${p.title}" class="pub-abstract-img" />
+    </div>
+  ` : ''}
 </article>`).join('');
   }
   const projGrid = document.getElementById('cfg-projects');
