@@ -27,12 +27,13 @@ const USER_CONFIG = {
 
   publications: [
     {
-      year:     2025,
+      year:     2026,
       title:    "Your Paper Title Here",
       authors:  "Your Name, Co-Author 1, Co-Author 2",
       venue:    "Conference / Journal Name 2025",
       links:    { pdf: "#", code: "#" },
       abstract: "A brief summary of your paper's contributions and findings.",
+      abstractImg: "https://cdn.stocksnap.io/img-thumbs/960w/circuit-macro_MADL8CN3KW.jpg",
     },
     {
       year:     2024,
