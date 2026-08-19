@@ -103,8 +103,7 @@ function boldName(authors, name) {
 function populateLists(cfg) {
   const pubList = document.getElementById('cfg-publications');
   if (pubList && cfg.publications?.length) {
-    pubList.innerHTML = cfg.publications.map(p => `
-      <article class="pub-card" data-year="${p.year}">
+    pubList.innerHTML = cfg.publications.map(p => `<article class="pub-card ${p.abstractImg ? 'has-abstract' : ''}" data-year="${p.year}">
   <div class="pub-year">${p.year}</div>
   
   ${p.abstractImg ? `
@@ -116,7 +115,9 @@ function populateLists(cfg) {
   <div class="pub-content">
     <div class="pub-header">
       <h3 class="pub-title">${p.title}</h3>
-      <div class="pub-links">${Object.entries(p.links||{}).map(([k,v])=>`<a href="${v}" class="pub-link">${k.toUpperCase()}</a>`).join('')}</div>
+      <div class="pub-links">
+        ${Object.entries(p.links||{}).map(([k,v])=>`<a href="${v}" class="pub-link">${k.toUpperCase()}</a>`).join('')}
+      </div>
     </div>
     <p class="pub-authors">${boldName(p.authors, cfg.name)}</p>
     <p class="pub-venue">${p.venue}</p>
