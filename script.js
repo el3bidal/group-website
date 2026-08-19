@@ -105,16 +105,23 @@ function populateLists(cfg) {
   if (pubList && cfg.publications?.length) {
     pubList.innerHTML = cfg.publications.map(p => `
       <article class="pub-card" data-year="${p.year}">
-        <div class="pub-year">${p.year}</div>
-        <div class="pub-content">
-          <div class="pub-header">
-            <h3 class="pub-title">${p.title}</h3>
-            <div class="pub-links">${Object.entries(p.links||{}).map(([k,v])=>`<a href="${v}" class="pub-link">${k.toUpperCase()}</a>`).join('')}</div>
-          </div>
-          <p class="pub-authors">${boldName(p.authors, cfg.name)}</p>
-          <p class="pub-venue">${p.venue}</p>
-        </div>
-      </article>`).join('');
+  <div class="pub-year">${p.year}</div>
+  
+  ${p.abstractImg ? `
+    <div class="pub-abstract">
+      <img src="${p.abstractImg}" alt="Graphical abstract for ${p.title}" class="pub-abstract-img" />
+    </div>
+  ` : ''}
+
+  <div class="pub-content">
+    <div class="pub-header">
+      <h3 class="pub-title">${p.title}</h3>
+      <div class="pub-links">${Object.entries(p.links||{}).map(([k,v])=>`<a href="${v}" class="pub-link">${k.toUpperCase()}</a>`).join('')}</div>
+    </div>
+    <p class="pub-authors">${boldName(p.authors, cfg.name)}</p>
+    <p class="pub-venue">${p.venue}</p>
+  </div>
+</article>`).join('');
   }
   const projGrid = document.getElementById('cfg-projects');
   if (projGrid && cfg.projects?.length) {
