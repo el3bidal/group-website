@@ -597,30 +597,39 @@ img {
     font-style: italic;
 }
 
-/* Update default pub-card layout when an abstract image is present */
+/* Update 3-column layout: Year | Main Content | Abstract Image */
 .pub-card.has-abstract {
-  grid-template-columns: 72px 160px 1fr;
+  grid-template-columns: 72px 1fr 180px;
+  align-items: center;
 }
 
-/* Abstract Image Container Styles */
+/* Allow title and links to layout cleanly */
+.pub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  flex-wrap: wrap; 
+}
+
+/* Abstract Image Container positioned on the far right */
 .pub-abstract {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
   width: 100%;
 }
 
 .pub-abstract-img {
   width: 100%;
-  max-height: 110px;
-  object-fit: contain;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  max-height: 100px;
+  object-fit: cover;
   border-radius: var(--radius-md);
-  padding: 4px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
 }
 
-/* Responsive adjustment for small screens (mobiles & tablets) */
+/* Tablet & Mobile layout adjustments */
 @media (max-width: 768px) {
   .pub-card,
   .pub-card.has-abstract {
@@ -628,16 +637,10 @@ img {
     gap: var(--space-sm);
   }
 
-  .pub-year {
-    padding-top: 0;
-  }
-
   .pub-abstract {
+    justify-content: flex-start;
     max-width: 240px;
-  }
-
-  .pub-abstract-img {
-    max-height: 140px;
+    order: 3; /* Places image below details on small screens */
   }
 }
 
