@@ -10,7 +10,7 @@ const USER_CONFIG = {
   university: "UCD",
   email:      "your.email@university.edu",
   bio:        "Exploring the frontiers of your research area, machine learning, and artificial intelligence. Building intelligent systems that advance scientific discovery.",
-  photo:      "",   // optional: path to your photo, e.g. "assets/photo.jpg"
+  photo:      "assets/Picture1.jpg",   // optional: path to your photo, e.g. "assets/photo.jpg"
 
   stats: [
     { value: "10+",  label: "Publications" },
