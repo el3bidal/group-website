@@ -597,6 +597,50 @@ img {
     font-style: italic;
 }
 
+/* Update default pub-card layout when an abstract image is present */
+.pub-card.has-abstract {
+  grid-template-columns: 72px 160px 1fr;
+}
+
+/* Abstract Image Container Styles */
+.pub-abstract {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.pub-abstract-img {
+  width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 4px;
+}
+
+/* Responsive adjustment for small screens (mobiles & tablets) */
+@media (max-width: 768px) {
+  .pub-card,
+  .pub-card.has-abstract {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .pub-year {
+    padding-top: 0;
+  }
+
+  .pub-abstract {
+    max-width: 240px;
+  }
+
+  .pub-abstract-img {
+    max-height: 140px;
+  }
+}
+
 /* ========================================
    Projects
    ======================================== */
