@@ -78,12 +78,12 @@ document.querySelectorAll('a[href="#"]').forEach(a => a.addEventListener('click'
 // ── Config Population ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof USER_CONFIG === 'undefined') return;
-  populateSimpleFields(USER_CONFIG);
+  //populateSimpleFields(USER_CONFIG);
   populateStats(USER_CONFIG);
   populateLists(USER_CONFIG);
 });
 
-function populateSimpleFields(cfg) {
+/* function populateSimpleFields(cfg) {
   document.querySelectorAll('[data-config]').forEach(el => {
     const key = el.dataset.config;
     if (key === 'role_university') el.innerHTML = `${cfg.role} at ${cfg.university}`;
@@ -94,7 +94,7 @@ function populateSimpleFields(cfg) {
     const av = document.querySelector('.image-placeholder, .hero-photo');
     if (av) av.innerHTML = `<img src="${cfg.photo}" alt="${cfg.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`;
   }
-}
+} */
 
 function boldName(authors, name) {
   if (!name) return authors;
