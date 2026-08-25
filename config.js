@@ -13,8 +13,8 @@ const USER_CONFIG = {
   photo:      "",   // optional: path to your photo, e.g. "assets/photo.jpg"
 
   stats: [
-    { value: "10+",  label: "Publications" },
-    { value: "200+", label: "Citations" },
+    { value: "20+",  label: "Publications" },
+    { value: "600+", label: "Citations" },
     { value: "5+",   label: "Projects" },
   ],
 
@@ -49,6 +49,30 @@ const USER_CONFIG = {
       venue:    "ACS Catalysis",
       links:    {URL: "https://doi.org/10.1021/acscatal.5c08315"},
       abstractImg: "assets/graphicalAbstracts/19.png",
+    },
+	{
+      year:     2025,
+      title:    "Development of Modulation-Excitation Synchrotron Small-Angle X-ray Scattering with Subnanometer Resolution",
+      authors:  "Abdullah J. Al Abdulghani; Yoichi M. A. Yamada; Junji Hyodo; Takeharu Sugiyama; Nobutaka Maeda",
+      venue:    "The Journal of Physical Chemistry C",
+      links:    {URL: "https://doi.org/10.1021/acs.jpcc.5c03542"},
+      abstractImg: "assets/graphicalAbstracts/18.png",
+    },
+	{
+      year:     2025,
+      title:    "Uncovering the pressure-dependent mechanism of CO2 hydrogenation to methanol on Ga-promoted Cu/ZrO2 using operando modulation-excitation DRIFTS",
+      authors:  "Abdullah J. Al Abdulghani; Sudipta Ganguly; Ryan H. Hagmann; Zhuoran Sun; Matias Alvear; Lesli O. Mark; Eranda Nikolla; Yomaira J. Pagán-Torres; Ive Hermans",
+      venue:    "Journal American Chemical Society",
+      links:    {URL: "https://doi.org/10.1021/jacs.5c04835"},
+      abstractImg: "assets/graphicalAbstracts/17.png",
+    },
+	{
+      year:     2025,
+      title:    "CO2 Capture and Reduction to CO in the Presence of CO over In-Cs/ZrO2 Dual-Functional Materials",
+      authors:  "Yuxuan Xie; Shinta Miyazaki; Lingcong Li; Kai Li; Fei Wang; Akira Oda; Atsushi Satsuma; Abdullah J. Al Abdulghani; Nobutaka Maeda; Akihiko Anzai; Takashi Toyao; Ken-ichi Shimizu",
+      venue:    "ACS Catalysis",
+      links:    {URL: "https://doi.org/10.1021/acscatal.5c02675"},
+      abstractImg: "assets/graphicalAbstracts/16.png",
     },
   ],
 
