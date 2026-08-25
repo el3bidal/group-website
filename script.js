@@ -157,12 +157,22 @@ function populateLists(cfg) {
 
 function populateStats(cfg) {
   const statsContainer = document.getElementById('cfg-stats') || document.querySelector('.hero-stats');
-  if (statsContainer && cfg.stats?.length) {
-    statsContainer.innerHTML = cfg.stats.map(s => `
+  if (!statsContainer || !cfg.stats?.length) return;
+
+  // Get the exact count of items in the publications array (or fall back to 20)
+  const publicationCount = cfg.publications ? cfg.publications.length : 20;
+
+  statsContainer.innerHTML = cfg.stats.map(s => {
+    // If the label is "Publications", use the dynamic array length
+    const valueToDisplay = s.label.toLowerCase() === 'publications' 
+      ? `${publicationCount}+` 
+      : s.value;
+
+    return `
       <div class="stat">
-        <span class="stat-number">${s.value}</span>
+        <span class="stat-number">${valueToDisplay}</span>
         <span class="stat-label">${s.label}</span>
       </div>
-    `).join('');
-  }
+    `;
+  }).join('');
 }
