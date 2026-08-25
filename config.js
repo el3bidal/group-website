@@ -74,6 +74,41 @@ const USER_CONFIG = {
       links:    {URL: "https://doi.org/10.1021/acscatal.5c02675"},
       abstractImg: "assets/graphicalAbstracts/16.png",
     },
+	{
+      year:     2025,
+      title:    "Surface Dynamics and Size Sensitivity of Pt-Catalyzed Methane Oxidation Probed by Modulation-Excitation X‑ray Absorption Spectroscopy",
+      authors:  "Abdullah J. Al Abdulghani; Yucheng Qian; Ken-ichi Shimizu; Takeharu Sugiyama; Nobutaka Maeda",
+      venue:    "The Journal of Physical Chemistry Letters",
+      links:    {URL: "https://doi.org/10.1021/acs.jpclett.5c00380"},
+    },
+	{
+      year:     2025,
+      title:    "Toward Low-Temperature Regeneration of CO2 Capture Adsorbents: Functionalization of Polyethylenimine",
+      authors:  "Abdullah J. Al Abdulghani; Florian Weisshar; Jannis Hack; Adroit T. N. Fajar; Guillaume Lambard; Nobutaka Maeda",
+      venue:    "ACS Sustainable Chemistry & Engineering",
+      links:    {URL: "https://doi.org/10.1021/acssuschemeng.5c01250"},
+    },
+	{
+      year:     2025,
+      title:    "Preventing Loss of Selectivity during the Oxidative Dehydrogenation of Propane over Supported Vanadium Catalysts",
+      authors:  "Abdullah J. Al Abdulghani; Unni Kurumbail; Son Dong; Natalie R. Altvater; Rick W. Dorn; Melissa C. Cendejas; William P. McDermott; Theodore O. Agbi; Collin M. Queen; Matias Alvear; Ashley R. Head; Aaron J. Rossini; Ive Hermans",
+      venue:    "ACS Catalysis",
+      links:    {URL: "https://doi.org/10.1021/acscatal.5c00720"},
+    },
+	{
+      year:     2025,
+      title:    "Can the Hock Process Be Used to Produce Phenol from Polystyrene?",
+      authors:  "Doohyun Baek; Abdullah J. Al Abdulghani; Dylan J. Walsh; Dillon T. Hofsommer; James B. Gerken; Changxia Shi; Eugene Y.-X. Chen; Ive Hermans; Shannon S. Stahl",
+      venue:    "Journal of the American Chemical Society",
+      links:    {URL: "https://doi.org/10.1021/jacs.4c18143"},
+    },
+	{
+      year:     2025,
+      title:    "Ammonia: A vital additive in the epoxidation of propylene over TS-1 extrudates",
+      authors:  "Matias Alvear; Jadiel Lopez-Gonzalez; Christopher Stäglich; Abdullah J. Al Abdulghani; Kari Eränen; Stefan Haase; Tapio Salmi; Ive Hermans",
+      venue:    "Chemical Engineering Journal",
+      links:    {URL: "https://doi.org/10.1016/j.cej.2025.160229"},
+    },
   ],
 
   projects: [
