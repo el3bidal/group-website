@@ -5,7 +5,7 @@
 
 const USER_CONFIG = {
   name:       "Transient Catalysis Lab",
-  initials:   "YN",
+  initials:   "TCL",
   role:       "for <i>operando</i> spectrokinetics",
   university: "UCD",
   email:      "your.email@university.edu",
