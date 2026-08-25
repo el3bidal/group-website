@@ -79,6 +79,7 @@ document.querySelectorAll('a[href="#"]').forEach(a => a.addEventListener('click'
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof USER_CONFIG === 'undefined') return;
   populateSimpleFields(USER_CONFIG);
+  populateStats(USER_CONFIG);
   populateLists(USER_CONFIG);
 });
 
@@ -151,5 +152,17 @@ function populateLists(cfg) {
     if (edu.length) html += `<div class="exp-category"><h3>Education</h3>${edu.map(e=>`<div class="exp-item"><div class="exp-period">${e.period}</div><div class="exp-details"><h4>${e.degree}</h4><p>${e.institution}</p></div></div>`).join('')}</div>`;
     if (exp.length) html += `<div class="exp-category"><h3>Experience</h3>${exp.map(e=>`<div class="exp-item"><div class="exp-period">${e.period}</div><div class="exp-details"><h4>${e.role}</h4><p>${e.institution}</p></div></div>`).join('')}</div>`;
     if (html) expGrid.innerHTML = html;
+  }
+}
+
+function populateStats(cfg) {
+  const statsContainer = document.getElementById('cfg-stats') || document.querySelector('.hero-stats');
+  if (statsContainer && cfg.stats?.length) {
+    statsContainer.innerHTML = cfg.stats.map(s => `
+      <div class="stat">
+        <span class="stat-number">${s.value}</span>
+        <span class="stat-label">${s.label}</span>
+      </div>
+    `).join('');
   }
 }

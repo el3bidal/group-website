@@ -8,7 +8,7 @@ const USER_CONFIG = {
   initials:   "TCL",
   role:       "for <i>operando</i> spectrokinetics",
   university: "UCD",
-  email:      "your.email@university.edu",
+  email:      "abdullah.alabdulghani@ucd.ie",
   bio:        "Exploring the frontiers of your research area, machine learning, and artificial intelligence. Building intelligent systems that advance scientific discovery.",
   photo:      "",   // optional: path to your photo, e.g. "assets/photo.jpg"
 
