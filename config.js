@@ -80,6 +80,7 @@ const USER_CONFIG = {
       authors:  "Abdullah J. Al Abdulghani; Yucheng Qian; Ken-ichi Shimizu; Takeharu Sugiyama; Nobutaka Maeda",
       venue:    "The Journal of Physical Chemistry Letters",
       links:    {URL: "https://doi.org/10.1021/acs.jpclett.5c00380"},
+      abstractImg: "assets/graphicalAbstracts/15.png",
     },
 	{
       year:     2025,
@@ -87,6 +88,7 @@ const USER_CONFIG = {
       authors:  "Abdullah J. Al Abdulghani; Florian Weisshar; Jannis Hack; Adroit T. N. Fajar; Guillaume Lambard; Nobutaka Maeda",
       venue:    "ACS Sustainable Chemistry & Engineering",
       links:    {URL: "https://doi.org/10.1021/acssuschemeng.5c01250"},
+      abstractImg: "assets/graphicalAbstracts/14.png",
     },
 	{
       year:     2025,
@@ -94,6 +96,7 @@ const USER_CONFIG = {
       authors:  "Abdullah J. Al Abdulghani; Unni Kurumbail; Son Dong; Natalie R. Altvater; Rick W. Dorn; Melissa C. Cendejas; William P. McDermott; Theodore O. Agbi; Collin M. Queen; Matias Alvear; Ashley R. Head; Aaron J. Rossini; Ive Hermans",
       venue:    "ACS Catalysis",
       links:    {URL: "https://doi.org/10.1021/acscatal.5c00720"},
+      abstractImg: "assets/graphicalAbstracts/13.png",
     },
 	{
       year:     2025,
