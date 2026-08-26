@@ -134,6 +134,7 @@ const USER_CONFIG = {
       authors:  "Jacob H. Jansen; Destiny Mathews; Alexander Marrione; Jalianet Román-Matías; Abdullah Al Abdulghani; Adam B. Powell; Selim Gerislioglu; William Keown; Sarah E. Specht; Ive Hermans",
       venue:    "ACS Sustainable Chemistry & Engineering",
       links:    {URL: "https://doi.org/10.1021/acssuschemeng.4c00561"},
+      abstractImg: "assets/graphicalAbstracts/8.png",
     },
 	{
       year:     2024,
