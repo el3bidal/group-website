@@ -154,6 +154,7 @@ const USER_CONFIG = {
       authors:  "Shao-Chun Wang; Abdullah Al Abdulghani; Edgard A. Lebrón-Rodríguez; Wei-Shang Lo; Haiyang Zhu; Ahmad Moini; Ivan Petrovic; Subramanian Prasad; Ive Hermans",
       venue:    "ChemCatChem",
       links:    {URL: "https://doi.org/10.1002/cctc.202200725"},
+      abstractImg: "assets/graphicalAbstracts/5.png",
     },
 	{
       year:     2020,
