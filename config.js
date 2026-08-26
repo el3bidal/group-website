@@ -125,6 +125,7 @@ const USER_CONFIG = {
       authors:  "Abdullah J. Al Abdulghani; Edgar E. Turizo-Pinilla; Maria J. Fabregas-Angulo; Ryan H. Hagmann; Faysal Ibrahim; Jacob H. Jansen; Theodore O. Agbi; Samiha Bhat; Miguel Sepúlveda-Pagán; Morgan O. Kraimer; Collin M. Queen; Zhuoran Sun; Eranda Nikolla; Yomaira J. Pagán-Torres; Ive Hermans",
       venue:    "Applied Catalysis B: Environment and Energy",
       links:    {URL: "https://doi.org/10.1016/j.apcatb.2024.124198"},
+      abstractImg: "assets/graphicalAbstracts/9.png",
     },
 	{
       year:     2024,
