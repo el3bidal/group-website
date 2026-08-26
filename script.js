@@ -101,30 +101,69 @@ function boldName(authors, name) {
   return authors.replace(name, `<strong>${name}</strong>`);
 }
 
+// Keep track of how many publications are currently shown
+let visiblePubs = 7; // Initial number of publications to display
+const PUBS_PER_LOAD = 7; // How many to show per "Load More" click
+
 function populateLists(cfg) {
+  // ── Publications with Load More ──────────────────────────────────────────
   const pubList = document.getElementById('cfg-publications');
   if (pubList && cfg.publications?.length) {
-    pubList.innerHTML = cfg.publications.map(p => `<article class="pub-card ${p.abstractImg ? 'has-abstract' : ''}" data-year="${p.year}">
-  <div class="pub-year">${p.year}</div>
+    
+    // Function to render the current slice of publications
+    function renderPubs() {
+      const itemsToRender = cfg.publications.slice(0, visiblePubs);
+      
+      pubList.innerHTML = itemsToRender.map(p => `
+        <article class="pub-card ${p.abstractImg ? 'has-abstract' : ''}" data-year="${p.year}">
+          <div class="pub-year">${p.year}</div>
 
-  <div class="pub-content">
-    <div class="pub-header">
-      <h3 class="pub-title">${p.title}</h3>
-      <div class="pub-links">
-        ${Object.entries(p.links||{}).map(([k,v])=>`<a href="${v}" class="pub-link">${k.toUpperCase()}</a>`).join('')}
-      </div>
-    </div>
-    <p class="pub-authors">${boldName(p.authors, cfg.name)}</p>
-    <p class="pub-venue">${p.venue}</p>
-  </div>
+          <div class="pub-content">
+            <div class="pub-header">
+              <h3 class="pub-title">${p.title}</h3>
+              <div class="pub-links">
+                ${Object.entries(p.links||{}).map(([k,v])=>`<a href="${v}" class="pub-link">${k.toUpperCase()}</a>`).join('')}
+              </div>
+            </div>
+            <p class="pub-authors">${boldName(p.authors, cfg.name)}</p>
+            <p class="pub-venue">${p.venue}</p>
+          </div>
 
-  ${p.abstractImg ? `
-    <div class="pub-abstract">
-      <img src="${p.abstractImg}" alt="Graphical abstract for ${p.title}" class="pub-abstract-img" />
-    </div>
-  ` : ''}
-</article>`).join('');
+          ${p.abstractImg ? `
+            <div class="pub-abstract">
+              <img src="${p.abstractImg}" alt="Graphical abstract for ${p.title}" class="pub-abstract-img" />
+            </div>
+          ` : ''}
+        </article>
+      `).join('');
+
+      // Manage the "Load More" button container
+      let btnWrapper = document.getElementById('pub-load-more-wrapper');
+      if (!btnWrapper) {
+        btnWrapper = document.createElement('div');
+        btnWrapper.id = 'pub-load-more-wrapper';
+        btnWrapper.className = 'load-more-container';
+        pubList.after(btnWrapper);
+      }
+
+      // Hide or show the button depending on whether more items remain
+      if (visiblePubs >= cfg.publications.length) {
+        btnWrapper.innerHTML = '';
+      } else {
+        btnWrapper.innerHTML = `<button id="load-more-pubs-btn" class="pub-link load-more-btn">Load More Publications</button>`;
+        
+        // Attach click listener
+        document.getElementById('load-more-pubs-btn').onclick = () => {
+          visiblePubs += PUBS_PER_LOAD;
+          renderPubs();
+        };
+      }
+    }
+
+    renderPubs();
   }
+
+  // ── Projects ─────────────────────────────────────────────────────────────
   const projGrid = document.getElementById('cfg-projects');
   if (projGrid && cfg.projects?.length) {
     projGrid.innerHTML = cfg.projects.map(p => `
@@ -134,6 +173,8 @@ function populateLists(cfg) {
         <div class="project-tags">${(p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
       </article>`).join('');
   }
+
+  // ── News ─────────────────────────────────────────────────────────────────
   const newsList = document.getElementById('cfg-news');
   if (newsList && cfg.news?.length) {
     newsList.innerHTML = cfg.news.map(n => `
@@ -145,6 +186,8 @@ function populateLists(cfg) {
         </div>
       </div>`).join('');
   }
+
+  // ── Experience ───────────────────────────────────────────────────────────
   const expGrid = document.getElementById('cfg-experience');
   if (expGrid) {
     const edu = cfg.education||[], exp = cfg.experience||[];

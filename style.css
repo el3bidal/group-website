@@ -1069,3 +1069,24 @@ img {
 /* ---- Skip Link ---- */
 .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent-primary); color: #fff; padding: 8px 16px; z-index: 9999; font-size: 0.875rem; transition: top 0.2s; }
 .skip-link:focus { top: 0; }
+
+
+/* ---- Load more button ---- */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+.load-more-btn {
+  cursor: pointer;
+  background: transparent;
+  padding: 8px 24px;
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+}
+
+.load-more-btn:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
