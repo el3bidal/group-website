@@ -104,6 +104,7 @@ const USER_CONFIG = {
       authors:  "Doohyun Baek; Abdullah J. Al Abdulghani; Dylan J. Walsh; Dillon T. Hofsommer; James B. Gerken; Changxia Shi; Eugene Y.-X. Chen; Ive Hermans; Shannon S. Stahl",
       venue:    "Journal of the American Chemical Society",
       links:    {URL: "https://doi.org/10.1021/jacs.4c18143"},
+      abstractImg: "assets/graphicalAbstracts/12.png",
     },
 	{
       year:     2025,
