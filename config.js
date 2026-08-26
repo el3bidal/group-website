@@ -162,6 +162,7 @@ const USER_CONFIG = {
       authors:  "Abdullah J. Al Abdulghani; Jung-Hyun Park; Sergey M. Kozlov; Dong-Chang Kang; Bedour AlSabban; Srikanth Pedireddy; Antonio Aguilar-Tapia; Samy Ould-Chikh; Jean-Louis Hazemann; Jean-Marie Basset; Luigi Cavallo; Kazuhiro Takanabe",
       venue:    "Journal of Catalysis",
       links:    {URL: "https://doi.org/10.1016/j.jcat.2020.09.015"},
+      abstractImg: "assets/graphicalAbstracts/4.png",
     },
 	{
       year:     2019,
