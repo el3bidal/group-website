@@ -4,12 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const USER_CONFIG = {
-  name:       "Transient Catalysis Lab",
-  initials:   "TCL",
-  role:       "for <i>operando</i> spectrokinetics",
-  university: "UCD",
-  email:      "abdullah.alabdulghani@ucd.ie",
-  bio:        "Exploring the frontiers of your research area, machine learning, and artificial intelligence. Building intelligent systems that advance scientific discovery.",
+  name:       "UCD Transient Catalysis Lab",
   photo:      "",   // optional: path to your photo, e.g. "assets/photo.jpg"
 
   stats: [

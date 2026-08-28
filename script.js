@@ -84,12 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* function populateSimpleFields(cfg) {
-  document.querySelectorAll('[data-config]').forEach(el => {
-    const key = el.dataset.config;
-    if (key === 'role_university') el.innerHTML = `${cfg.role} at ${cfg.university}`;
-    else if (cfg[key] !== undefined) el.innerHTML = cfg[key];
-  });
-  if (cfg.name) document.title = `${cfg.name} | Academic Homepage`;
   if (cfg.photo) {
     const av = document.querySelector('.image-placeholder, .hero-photo');
     if (av) av.innerHTML = `<img src="${cfg.photo}" alt="${cfg.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`;
