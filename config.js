@@ -23,6 +23,14 @@ const USER_CONFIG = {
   publications: [
     {
       year:     2026,
+      title:    "High-Temperature EXAFS Despite Debye–Waller Damping by Modulation-Excitation XAS",
+      authors:  "Daniel Duijnstee; Keiko Kojima; Takeharu Sugiyama; Abbas Beheshti Askari; Abdullah J. Al Abdulghani; Ken-Ichi Shimizu; Nobutaka Maeda",
+      venue:    "The Journal of Physical Chemistry C",
+      links:    {URL: "https://doi.org/10.1021/acs.jpcc.6c05557"},
+      abstractImg: "assets/graphicalAbstracts/22.png",
+    },
+    {
+      year:     2026,
       title:    "Impurity Detection and Quantification in Polymer Films by Two-Dimensional Infrared Spectroscopic Imaging and Multivariate Analysis",
       authors:  "Abdullah J. Al Abdulghani; Nobutaka Maeda; Guillaume Lambard; Adroit T. N. Fajar",
       venue:    "Analytical Chemistry",
